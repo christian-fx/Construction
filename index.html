@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Oswald:wght@300;400;500;600;700&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Oswald:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -85,6 +85,7 @@
       .scrollbar-hide {
         -ms-overflow-style: none;
         scrollbar-width: none;
+        scroll-behavior: smooth;
       }
       .scrollbar-hide::-webkit-scrollbar {
         display: none;
@@ -144,7 +145,6 @@
   <body
     class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-body antialiased transition-colors duration-300"
   >
-    <!-- Navigation -->
     <nav
       class="bg-white dark:bg-surface-dark py-4 shadow-sm sticky top-0 z-50"
     >
@@ -180,7 +180,6 @@
       </div>
     </nav>
 
-    <!-- Hero Section -->
     <header class="bg-[#1A222E] dark:bg-black relative overflow-hidden">
       <div
         class="container mx-auto px-6 pt-16 pb-0 md:pt-24 md:pb-0 grid md:grid-cols-2 gap-12 items-center min-h-[600px]"
@@ -226,7 +225,6 @@
       </div>
     </header>
 
-    <!-- Welcome Section -->
     <section class="py-20 md:py-28">
       <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
         <div>
@@ -314,7 +312,6 @@
       </div>
     </section>
 
-    <!-- Services Section -->
     <section class="py-20 bg-background-light dark:bg-[#151515]">
       <div class="container mx-auto px-6">
         <div class="mb-12">
@@ -421,7 +418,6 @@
       </div>
     </section>
 
-    <!-- Testimonials -->
     <section class="py-20 overflow-hidden">
       <div class="container mx-auto px-6">
         <div class="grid lg:grid-cols-2 gap-16 items-center">
@@ -437,6 +433,7 @@
             </p>
             <div class="flex gap-4">
               <button
+                id="prevBtn"
                 class="w-12 h-12 rounded-full bg-gray-100 dark:bg-surface-dark hover:bg-primary dark:hover:bg-primary flex items-center justify-center transition-colors border border-transparent hover:border-primary"
               >
                 <span class="material-icons-outlined text-gray-600 dark:text-gray-300 hover:text-gray-900"
@@ -444,6 +441,7 @@
                 >
               </button>
               <button
+                id="nextBtn"
                 class="w-12 h-12 rounded-full bg-primary hover:bg-yellow-500 flex items-center justify-center shadow-lg transition-colors"
               >
                 <span class="material-icons-outlined text-gray-900"
@@ -452,7 +450,7 @@
               </button>
             </div>
           </div>
-          <div class="flex gap-6 overflow-x-auto pb-8 snap-x scrollbar-hide">
+          <div id="testimonialSlider" class="flex gap-6 overflow-x-auto pb-8 snap-x scrollbar-hide scroll-smooth">
             <div
               class="min-w-[300px] md:min-w-[350px] bg-background-light dark:bg-surface-dark p-8 rounded-2xl shadow-sm text-center border border-gray-100 dark:border-gray-800 snap-center"
             >
@@ -585,7 +583,6 @@
       </div>
     </section>
 
-    <!-- News Section -->
     <section class="py-20 bg-white dark:bg-[#121212]">
       <div class="container mx-auto px-6">
         <div
@@ -709,8 +706,7 @@
         </div>
       </div>
     </section>
-    <!-- Why Choose Us -->
-<section class="py-20 bg-background-light dark:bg-[#151515]">
+    <section class="py-20 bg-background-light dark:bg-[#151515]">
   <div class="container mx-auto px-6">
     <div class="text-center max-w-3xl mx-auto mb-16">
       <h2 class="font-display font-bold text-4xl md:text-5xl text-gray-900 dark:text-white mb-4">
@@ -722,7 +718,6 @@
     </div>
     
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-      <!-- Item -->
       <div class="bg-white dark:bg-surface-dark p-8 rounded-xl border border-gray-100 dark:border-gray-800 text-center hover:shadow-lg transition-shadow">
         <span class="material-icons-outlined text-5xl text-primary mb-4">verified</span>
         <h4 class="font-display font-bold text-lg text-gray-900 dark:text-white mb-2">
@@ -733,7 +728,6 @@
         </p>
       </div>
       
-      <!-- Item -->
       <div class="bg-white dark:bg-surface-dark p-8 rounded-xl border border-gray-100 dark:border-gray-800 text-center hover:shadow-lg transition-shadow">
         <span class="material-icons-outlined text-5xl text-primary mb-4">engineering</span>
         <h4 class="font-display font-bold text-lg text-gray-900 dark:text-white mb-2">
@@ -744,7 +738,6 @@
         </p>
       </div>
       
-      <!-- Item -->
       <div class="bg-white dark:bg-surface-dark p-8 rounded-xl border border-gray-100 dark:border-gray-800 text-center hover:shadow-lg transition-shadow">
         <span class="material-icons-outlined text-5xl text-primary mb-4">schedule</span>
         <h4 class="font-display font-bold text-lg text-gray-900 dark:text-white mb-2">
@@ -755,7 +748,6 @@
         </p>
       </div>
       
-      <!-- Item -->
       <div class="bg-white dark:bg-surface-dark p-8 rounded-xl border border-gray-100 dark:border-gray-800 text-center hover:shadow-lg transition-shadow">
         <span class="material-icons-outlined text-5xl text-primary mb-4">support_agent</span>
         <h4 class="font-display font-bold text-lg text-gray-900 dark:text-white mb-2">
@@ -769,7 +761,6 @@
   </div>
 </section>
 
-<!-- Call To Action -->
 <section class="py-24 bg-[#1A222E] dark:bg-black relative overflow-hidden">
   <div class="absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent"></div>
 
@@ -800,11 +791,9 @@
   </div>
 </section>
 
-<!-- Certifications & Trust Badges -->
 <section class="py-20 bg-background-light dark:bg-[#151515] overflow-hidden">
   <div class="container mx-auto px-6">
     
-    <!-- Heading -->
     <div class="text-center max-w-3xl mx-auto mb-14">
       <h2 class="font-display font-bold text-4xl md:text-5xl text-gray-900 dark:text-white mb-4">
         Certified, Verified & Insured
@@ -814,11 +803,9 @@
       </p>
     </div>
     
-    <!-- Scrolling Wrapper -->
     <div class="relative">
       <div class="flex gap-8 w-max animate-scroll">
         
-        <!-- Badge -->
         <div class="trust-badge">
           <span class="material-icons-outlined">verified</span>
           <p>Registered & Verified</p>
@@ -854,7 +841,6 @@
           <p>Quality Assured</p>
         </div>
         
-        <!-- Duplicate badges for seamless loop -->
         <div class="trust-badge">
           <span class="material-icons-outlined">verified</span>
           <p>Registered & Verified</p>
@@ -870,8 +856,7 @@
           <p>Fully Insured</p>
         </div>
         
-                <!-- Duplicate badges for seamless loop -->
-        <div class="trust-badge">
+                <div class="trust-badge">
           <span class="material-icons-outlined">verified</span>
           <p>Registered & Verified</p>
         </div>
@@ -892,7 +877,6 @@
   </div>
 </section>
 
-    <!-- Footer -->
     <footer class="bg-white dark:bg-background-dark py-16 border-t border-gray-200 dark:border-gray-800">
       <div class="container mx-auto px-6 text-center">
         <div class="flex justify-center items-center gap-2 mb-8">
@@ -953,12 +937,31 @@
       </div>
     </footer>
 
-    <!-- Dark Mode Toggle -->
     <button
       class="theme-toggle w-12 h-12 bg-primary text-gray-900 rounded-full shadow-lg flex items-center justify-center hover:bg-yellow-500 focus:outline-none transition-all"
       onclick="document.documentElement.classList.toggle('dark')"
     >
       <span class="material-icons-outlined">brightness_4</span>
     </button>
+
+    <script>
+      const slider = document.getElementById('testimonialSlider');
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+
+      // Function to get the scroll width based on one card size
+      const getScrollAmount = () => {
+        const card = slider.querySelector('div');
+        return card ? card.offsetWidth + 24 : 350; // card width + gap
+      };
+
+      nextBtn.addEventListener('click', () => {
+        slider.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+      });
+
+      prevBtn.addEventListener('click', () => {
+        slider.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+      });
+    </script>
   </body>
 </html>
